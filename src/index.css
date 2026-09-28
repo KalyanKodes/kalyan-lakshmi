@@ -1,0 +1,2883 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "Noto Serif Telugu", serif;
+  color: #f5e8d8;
+  background: #12090b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #12090b;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.app {
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(113, 30, 47, 0.25),
+      transparent 35rem
+    ),
+    #12090b;
+}
+
+/* -----------------------------------------
+   Hero container
+----------------------------------------- */
+
+.hero {
+  position: relative;
+
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4rem 1.5rem;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(107, 27, 43, 0.18),
+      transparent 30rem
+    ),
+    linear-gradient(
+      180deg,
+      #12090b 0%,
+      #170a0e 55%,
+      #100709 100%
+    );
+}
+
+/* -----------------------------------------
+   Ambient glow
+----------------------------------------- */
+
+.hero-glow {
+  position: absolute;
+
+  width: 25rem;
+  height: 25rem;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.hero-glow-left {
+  left: -15rem;
+  top: 25%;
+
+  background: rgba(113, 29, 47, 0.16);
+}
+
+.hero-glow-right {
+  right: -15rem;
+  bottom: 10%;
+
+  background: rgba(201, 156, 92, 0.07);
+}
+
+/* -----------------------------------------
+   Mandala
+----------------------------------------- */
+
+.hero-mandala {
+  position: absolute;
+
+  width: min(75vw, 700px);
+  aspect-ratio: 1;
+
+  opacity: 0.13;
+
+  pointer-events: none;
+}
+
+.mandala-ring {
+  position: absolute;
+
+  border: 1px solid rgba(201, 156, 92, 0.65);
+
+  border-radius: 50%;
+
+  inset: 0;
+}
+
+.ring-1 {
+  transform: rotate(0deg);
+}
+
+.ring-2 {
+  inset: 12%;
+
+  border-style: dashed;
+
+  transform: rotate(45deg);
+}
+
+.ring-3 {
+  inset: 25%;
+
+  border-radius: 30%;
+
+  transform: rotate(45deg);
+}
+
+/* -----------------------------------------
+   Hero content
+----------------------------------------- */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(100%, 800px);
+}
+
+/* -----------------------------------------
+   Eyebrow
+----------------------------------------- */
+
+.hero-eyebrow {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  color: #c99c5c;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.18em;
+}
+
+/* -----------------------------------------
+   Date
+----------------------------------------- */
+
+.hero-date {
+  margin: 1.5rem 0 0;
+
+  color: rgba(234, 208, 160, 0.55);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 0.8rem;
+
+  letter-spacing: 0.35em;
+}
+
+/* -----------------------------------------
+   Main heading
+----------------------------------------- */
+
+.hero h1 {
+  margin: 1rem 0 0;
+
+  color: #f5e8d8;
+
+  font-family:
+    "Playfair Display",
+    "Noto Serif Telugu",
+    serif;
+
+  font-size: clamp(4rem, 14vw, 9rem);
+
+  font-weight: 600;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.055em;
+}
+
+.hero h1 span {
+  display: block;
+
+  margin-top: 0.65rem;
+
+  color: #c99c5c;
+}
+
+/* -----------------------------------------
+   Message
+----------------------------------------- */
+
+.hero-message {
+  margin-top: 2.2rem;
+
+  color: #dfc8b6;
+
+  font-size: clamp(1rem, 2.7vw, 1.35rem);
+
+  line-height: 2;
+}
+
+.hero-message p {
+  margin: 0.3rem 0;
+}
+
+/* -----------------------------------------
+   Divider
+----------------------------------------- */
+
+.hero-divider {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.8rem;
+
+  margin: 1.8rem auto;
+}
+
+.hero-divider span:not(.divider-star) {
+  width: 65px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 156, 92, 0.6)
+  );
+}
+
+.hero-divider span:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(201, 156, 92, 0.6),
+    transparent
+  );
+}
+
+.divider-star {
+  color: #c99c5c;
+
+  font-size: 0.8rem;
+}
+
+/* -----------------------------------------
+   Button
+----------------------------------------- */
+
+.hero-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.6rem;
+
+  padding: 0.9rem 1.5rem;
+
+  border: 1px solid rgba(234, 208, 160, 0.4);
+
+  border-radius: 999px;
+
+  color: #fff4e8;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(123, 35, 53, 0.95),
+      rgba(78, 19, 30, 0.95)
+    );
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.25),
+    inset 0 0 20px rgba(255, 255, 255, 0.03);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-button:hover {
+  border-color: rgba(234, 208, 160, 0.8);
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.32),
+    0 0 25px rgba(201, 156, 92, 0.08);
+}
+
+/* -----------------------------------------
+   Hint
+----------------------------------------- */
+
+.hero-hint {
+  margin-top: 1.3rem;
+
+  color: rgba(223, 200, 182, 0.38);
+
+  font-size: 0.7rem;
+}
+
+/* -----------------------------------------
+   Side name
+----------------------------------------- */
+
+.hero-side-text {
+  position: absolute;
+
+  right: 2rem;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 0.15rem;
+
+  color: rgba(201, 156, 92, 0.3);
+
+  font-size: 0.65rem;
+
+  line-height: 1.3;
+}
+
+.side-x {
+  margin: 0.4rem 0;
+
+  color: rgba(201, 156, 92, 0.5);
+}
+
+/* -----------------------------------------
+   Mobile
+----------------------------------------- */
+
+@media (max-width: 640px) {
+  .hero {
+    padding-inline: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.8rem, 18vw, 6rem);
+  }
+
+  .hero-side-text {
+    display: none;
+  }
+
+  .hero-mandala {
+    width: 100vw;
+  }
+
+  .hero-divider span:not(.divider-star) {
+    width: 45px;
+  }
+}
+
+
+/* =========================================
+   BEFORE MEETING
+========================================= */
+
+.before-meeting {
+  position: relative;
+
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8rem 1.5rem;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(106, 27, 43, 0.16),
+      transparent 28rem
+    ),
+    linear-gradient(
+      180deg,
+      #12090b,
+      #190b10 50%,
+      #12090b
+    );
+}
+
+/* -----------------------------------------
+   Ambient glow
+----------------------------------------- */
+
+.before-glow {
+  position: absolute;
+
+  width: 26rem;
+  height: 26rem;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  background: rgba(128, 33, 50, 0.09);
+
+  top: 35%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+/* -----------------------------------------
+   Content
+----------------------------------------- */
+
+.before-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(100%, 760px);
+}
+
+/* -----------------------------------------
+   Chapter number
+----------------------------------------- */
+
+.chapter-number {
+  margin-bottom: 1.2rem;
+
+  color: rgba(201, 156, 92, 0.38);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.4em;
+}
+
+/* -----------------------------------------
+   Section kicker
+----------------------------------------- */
+
+.section-kicker {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.55rem;
+
+  color: #c99c5c;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.16em;
+}
+
+/* -----------------------------------------
+   Heading
+----------------------------------------- */
+
+.before-content h2 {
+  margin: 1.3rem 0 3rem;
+
+  color: #f5e8d8;
+
+  font-family:
+    "Playfair Display",
+    "Noto Serif Telugu",
+    serif;
+
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+/* -----------------------------------------
+   Main text
+----------------------------------------- */
+
+.before-text {
+  color: #dbc5b5;
+
+  font-size: clamp(1.05rem, 2.7vw, 1.35rem);
+
+  line-height: 2.2;
+}
+
+.before-text p {
+  margin: 0 0 2rem;
+}
+
+.highlight-text {
+  color: #e8cfa9;
+
+  font-weight: 600;
+}
+
+/* -----------------------------------------
+   Divider
+----------------------------------------- */
+
+.chapter-divider {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  margin: 3rem auto;
+}
+
+.chapter-divider span {
+  width: 70px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 156, 92, 0.5)
+  );
+}
+
+.chapter-divider span:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(201, 156, 92, 0.5),
+    transparent
+  );
+}
+
+.chapter-divider i {
+  color: #c99c5c;
+
+  font-style: normal;
+
+  font-size: 0.75rem;
+}
+
+/* -----------------------------------------
+   Poem
+----------------------------------------- */
+
+.before-poem {
+  position: relative;
+
+  margin: 0 auto;
+
+  padding: 2.5rem 1.5rem;
+
+  border-top: 1px solid rgba(201, 156, 92, 0.14);
+  border-bottom: 1px solid rgba(201, 156, 92, 0.14);
+
+  color: #e6d1c0;
+
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+
+  line-height: 2.05;
+}
+
+.before-poem p {
+  margin: 0;
+}
+
+.before-poem .poem-gap {
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+
+  color: rgba(230, 209, 192, 0.62);
+}
+
+.gold-poem {
+  margin-top: 1.1rem !important;
+
+  color: #d8ae73;
+
+  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+
+  font-weight: 600;
+}
+
+/* -----------------------------------------
+   Closing
+----------------------------------------- */
+
+.before-closing {
+  margin-top: 3rem;
+
+  color: rgba(219, 197, 181, 0.52);
+
+  font-size: 0.95rem;
+
+  line-height: 2;
+}
+
+.before-closing p {
+  margin: 0;
+}
+
+.small-star {
+  margin-bottom: 0.8rem;
+
+  color: rgba(201, 156, 92, 0.6);
+
+  font-size: 0.75rem;
+}
+
+/* -----------------------------------------
+   Mobile
+----------------------------------------- */
+
+@media (max-width: 640px) {
+  .before-meeting {
+    padding: 6rem 1.2rem;
+  }
+
+  .before-content h2 {
+    margin-bottom: 2.2rem;
+  }
+
+  .chapter-divider {
+    margin: 2.3rem auto;
+  }
+
+  .chapter-divider span {
+    width: 45px;
+  }
+
+  .before-poem {
+    padding-inline: 0.8rem;
+  }
+}
+
+
+
+/* =========================================
+   PELLI CHOOPULU
+========================================= */
+
+.pelli-choopulu {
+  position: relative;
+
+  min-height: 110svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9rem 1.5rem;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(126, 31, 49, 0.2),
+      transparent 30rem
+    ),
+    linear-gradient(
+      180deg,
+      #12090b,
+      #200d13 50%,
+      #12090b
+    );
+}
+
+/* -----------------------------------------
+   Ambient glows
+----------------------------------------- */
+
+.pelli-glow {
+  position: absolute;
+
+  width: 30rem;
+  height: 30rem;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+}
+
+.pelli-glow-one {
+  left: -18rem;
+  top: 30%;
+
+  background: rgba(113, 28, 46, 0.15);
+}
+
+.pelli-glow-two {
+  right: -18rem;
+  bottom: 15%;
+
+  background: rgba(201, 156, 92, 0.07);
+}
+
+/* -----------------------------------------
+   Decorative orbit circles
+----------------------------------------- */
+
+.pelli-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(201, 156, 92, 0.08);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 600px;
+  height: 600px;
+
+  animation: orbitRotate 35s linear infinite;
+}
+
+.orbit-two {
+  width: 850px;
+  height: 850px;
+
+  border-style: dashed;
+
+  opacity: 0.4;
+
+  animation: orbitRotateReverse 55s linear infinite;
+}
+
+.orbit-three {
+  width: 1100px;
+  height: 1100px;
+
+  opacity: 0.25;
+}
+
+/* -----------------------------------------
+   Content
+----------------------------------------- */
+
+.pelli-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(100%, 800px);
+}
+
+/* -----------------------------------------
+   Date
+----------------------------------------- */
+
+.pelli-date {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+
+  margin: 2.3rem 0 0;
+
+  color: #d8ae73;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(1.4rem, 4vw, 2rem);
+
+  letter-spacing: 0.15em;
+}
+
+.pelli-date i {
+  color: rgba(201, 156, 92, 0.4);
+
+  font-size: 0.8rem;
+
+  font-style: normal;
+}
+
+/* -----------------------------------------
+   Main heading
+----------------------------------------- */
+
+.pelli-content h2 {
+  margin: 2rem 0 2.5rem;
+
+  color: #f5e8d8;
+
+  font-family:
+    "Playfair Display",
+    "Noto Serif Telugu",
+    serif;
+
+  font-size: clamp(3.5rem, 10vw, 7rem);
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+/* -----------------------------------------
+   Intro
+----------------------------------------- */
+
+.pelli-intro {
+  color: #dbc5b5;
+
+  font-size: clamp(1.05rem, 2.8vw, 1.4rem);
+
+  line-height: 2.15;
+}
+
+.pelli-intro p {
+  margin: 0 0 1.2rem;
+}
+
+.pelli-intro span {
+  color: #e7cda9;
+}
+
+/* -----------------------------------------
+   Main reveal
+----------------------------------------- */
+
+.pelli-reveal {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin: 3.5rem auto;
+
+  color: #e7d2c0;
+}
+
+.reveal-line {
+  width: 100px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(201, 156, 92, 0.6),
+      transparent
+    );
+}
+
+.reveal-heart {
+  display: grid;
+
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin: 1rem 0;
+
+  color: #d8ae73;
+
+  border: 1px solid rgba(201, 156, 92, 0.25);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 35px rgba(201, 156, 92, 0.08);
+}
+
+.pelli-reveal p {
+  margin: 0.5rem 0 0;
+
+  font-size: clamp(1rem, 2.7vw, 1.3rem);
+}
+
+.pelli-reveal strong {
+  margin-top: 0.3rem;
+
+  color: #d8ae73;
+
+  font-family:
+    "Playfair Display",
+    "Noto Serif Telugu",
+    serif;
+
+  font-size: clamp(2.5rem, 7vw, 5rem);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+/* -----------------------------------------
+   Poem
+----------------------------------------- */
+
+.pelli-poem {
+  max-width: 650px;
+
+  margin: 3rem auto 0;
+
+  padding: 2.5rem 1rem;
+
+  border-top: 1px solid rgba(201, 156, 92, 0.12);
+  border-bottom: 1px solid rgba(201, 156, 92, 0.12);
+
+  color: #dfc8b6;
+
+  font-size: clamp(1.05rem, 2.8vw, 1.35rem);
+
+  line-height: 2.15;
+}
+
+.pelli-poem p {
+  margin: 0 0 1.2rem;
+}
+
+.pelli-poem p:last-child {
+  margin-bottom: 0;
+
+  color: rgba(223, 200, 182, 0.65);
+}
+
+/* -----------------------------------------
+   Closing
+----------------------------------------- */
+
+.pelli-closing {
+  margin-top: 3rem;
+
+  color: rgba(223, 200, 182, 0.55);
+
+  line-height: 2;
+}
+
+.pelli-closing span {
+  display: block;
+
+  margin-bottom: 0.7rem;
+
+  color: rgba(201, 156, 92, 0.6);
+}
+
+/* -----------------------------------------
+   Animations
+----------------------------------------- */
+
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitRotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* -----------------------------------------
+   Mobile
+----------------------------------------- */
+
+@media (max-width: 640px) {
+  .pelli-choopulu {
+    min-height: 100svh;
+
+    padding: 7rem 1.2rem;
+  }
+
+  .pelli-orbit {
+    opacity: 0.5;
+  }
+
+  .orbit-one {
+    width: 360px;
+    height: 360px;
+  }
+
+  .orbit-two {
+    width: 520px;
+    height: 520px;
+  }
+
+  .orbit-three {
+    width: 680px;
+    height: 680px;
+  }
+
+  .pelli-date {
+    gap: 0.7rem;
+  }
+
+  .pelli-poem {
+    padding-inline: 0.5rem;
+  }
+}
+
+
+/* =========================================
+   SIMPLICITY
+========================================= */
+
+.simplicity {
+  position: relative;
+
+  min-height: 110svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9rem 1.5rem;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(201, 156, 92, 0.07),
+      transparent 28rem
+    ),
+    linear-gradient(
+      180deg,
+      #12090b,
+      #17100e 50%,
+      #12090b
+    );
+}
+
+/* -----------------------------------------
+   Ambient glow
+----------------------------------------- */
+
+.simplicity-glow {
+  position: absolute;
+
+  width: 28rem;
+  height: 28rem;
+
+  border-radius: 50%;
+
+  background: rgba(201, 156, 92, 0.06);
+
+  filter: blur(110px);
+
+  left: 50%;
+  top: 40%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+/* -----------------------------------------
+   Jasmine decoration
+----------------------------------------- */
+
+.jasmine {
+  position: absolute;
+
+  color: rgba(238, 221, 196, 0.18);
+
+  font-size: 3rem;
+
+  pointer-events: none;
+
+  animation: jasmineFloat 6s ease-in-out infinite;
+}
+
+.jasmine-one {
+  left: 8%;
+  top: 25%;
+}
+
+.jasmine-two {
+  right: 9%;
+  top: 48%;
+
+  animation-delay: 1.5s;
+}
+
+.jasmine-three {
+  left: 15%;
+  bottom: 16%;
+
+  font-size: 2rem;
+
+  animation-delay: 3s;
+}
+
+/* -----------------------------------------
+   Content
+----------------------------------------- */
+
+.simplicity-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(100%, 760px);
+}
+
+/* -----------------------------------------
+   Heading
+----------------------------------------- */
+
+.simplicity h2 {
+  margin: 1.3rem 0 3rem;
+
+  color: #f5e8d8;
+
+  font-family:
+    "Playfair Display",
+    "Noto Serif Telugu",
+    serif;
+
+  font-size: clamp(3rem, 9vw, 6.5rem);
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+/* -----------------------------------------
+   Intro
+----------------------------------------- */
+
+.simplicity-intro {
+  color: #d9c3b3;
+
+  font-size: clamp(1rem, 2.7vw, 1.3rem);
+
+  line-height: 2.15;
+}
+
+.simplicity-intro p {
+  margin: 0 0 1.5rem;
+}
+
+/* -----------------------------------------
+   Main statement
+----------------------------------------- */
+
+.simplicity-statement {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin: 3rem auto;
+}
+
+.statement-line {
+  width: 90px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(201, 156, 92, 0.65),
+      transparent
+    );
+}
+
+.statement-symbol {
+  margin: 1rem 0;
+
+  color: #c99c5c;
+
+  font-size: 0.75rem;
+}
+
+.simplicity-statement strong {
+  color: #d8ae73;
+
+  font-family:
+    "Playfair Display",
+    "Noto Serif Telugu",
+    serif;
+
+  font-size: clamp(2.7rem, 8vw, 5.5rem);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+/* -----------------------------------------
+   Poem
+----------------------------------------- */
+
+.simplicity-poem {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  padding: 2.5rem 1rem;
+
+  border-top: 1px solid rgba(201, 156, 92, 0.13);
+
+  border-bottom: 1px solid rgba(201, 156, 92, 0.13);
+
+  color: #e1cbbb;
+
+  font-size: clamp(1.05rem, 2.8vw, 1.35rem);
+
+  line-height: 2.15;
+}
+
+.simplicity-poem p {
+  margin: 0 0 0.7rem;
+}
+
+.simplicity-poem .poem-space {
+  height: 1rem;
+}
+
+.poem-highlight {
+  margin-top: 1.5rem !important;
+
+  color: #d8ae73;
+
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+
+  font-weight: 600;
+}
+
+/* -----------------------------------------
+   Closing
+----------------------------------------- */
+
+.simplicity-closing {
+  margin-top: 3rem;
+
+  color: rgba(219, 195, 179, 0.58);
+
+  font-size: 0.98rem;
+
+  line-height: 2.1;
+}
+
+.closing-line {
+  width: 45px;
+
+  height: 1px;
+
+  margin: 0 auto 1.2rem;
+
+  background: rgba(201, 156, 92, 0.35);
+}
+
+.closing-star {
+  margin-top: 1rem;
+
+  color: rgba(201, 156, 92, 0.55);
+
+  font-size: 0.7rem;
+}
+
+/* -----------------------------------------
+   Animation
+----------------------------------------- */
+
+@keyframes jasmineFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+/* -----------------------------------------
+   Mobile
+----------------------------------------- */
+
+@media (max-width: 640px) {
+  .simplicity {
+    min-height: 100svh;
+
+    padding: 7rem 1.2rem;
+  }
+
+  .jasmine {
+    font-size: 2rem;
+  }
+
+  .simplicity-poem {
+    padding-inline: 0.5rem;
+  }
+}
+
+
+
+
+/* =========================
+   FUTURE SECTION
+========================= */
+
+.future {
+  position: relative;
+  min-height: 100vh;
+  padding: 130px 24px 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(150, 92, 55, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #170b0d 0%,
+      #211014 50%,
+      #12090b 100%
+    );
+}
+
+.future-content {
+  position: relative;
+  z-index: 2;
+  width: min(720px, 100%);
+  text-align: center;
+}
+
+.future-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.future-glow-one {
+  top: 8%;
+  left: -180px;
+  background: rgba(119, 54, 48, 0.45);
+}
+
+.future-glow-two {
+  bottom: 5%;
+  right: -180px;
+  background: rgba(180, 130, 65, 0.2);
+}
+
+/* Heading */
+
+.future h2 {
+  margin: 28px 0 42px;
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #f5e8d8;
+}
+
+.future-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 55px;
+}
+
+.future-intro p {
+  margin: 0;
+  color: rgba(245, 232, 216, 0.68);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 2;
+}
+
+/* Highlight */
+
+.future-highlight {
+  position: relative;
+  width: min(500px, 100%);
+  margin: 0 auto 55px;
+  padding: 38px 25px;
+  border-top: 1px solid rgba(201, 159, 92, 0.25);
+  border-bottom: 1px solid rgba(201, 159, 92, 0.25);
+}
+
+.future-heart {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 159, 92, 0.4);
+  border-radius: 50%;
+  color: #c99f5c;
+}
+
+.future-highlight p {
+  margin: 0;
+  color: rgba(245, 232, 216, 0.75);
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+/* Main statement */
+
+.future-statement {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto 65px;
+  width: min(680px, 100%);
+}
+
+.future-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 159, 92, 0.5)
+  );
+}
+
+.future-line:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(201, 159, 92, 0.5),
+    transparent
+  );
+}
+
+.future-statement p {
+  flex-shrink: 0;
+  margin: 0;
+  color: #e8cfa5;
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  line-height: 2;
+}
+
+.future-statement strong {
+  color: #f5e8d8;
+  font-weight: 600;
+}
+
+/* Poem */
+
+.future-poem {
+  margin: 0 auto;
+  width: min(560px, 100%);
+}
+
+.future-poem p {
+  margin: 0;
+  color: rgba(245, 232, 216, 0.72);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  line-height: 2.1;
+}
+
+.future-poem-space {
+  height: 24px;
+}
+
+.future-poem-highlight {
+  margin-top: 30px !important;
+  color: #d8b777 !important;
+}
+
+/* Closing */
+
+.future-closing {
+  margin-top: 75px;
+}
+
+.future-closing span {
+  display: block;
+  margin-bottom: 20px;
+  color: #c99f5c;
+  font-size: 18px;
+}
+
+.future-closing p {
+  margin: 0;
+  color: rgba(245, 232, 216, 0.58);
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .future {
+    min-height: auto;
+    padding: 100px 20px 120px;
+  }
+
+  .future h2 {
+    margin-top: 22px;
+    margin-bottom: 34px;
+  }
+
+  .future-intro {
+    margin-bottom: 45px;
+  }
+
+  .future-highlight {
+    padding: 32px 18px;
+    margin-bottom: 45px;
+  }
+
+  .future-statement {
+    gap: 12px;
+    margin-bottom: 50px;
+  }
+
+  .future-line {
+    min-width: 20px;
+  }
+
+  .future-statement p {
+    font-size: 1rem;
+  }
+
+  .future-poem p {
+    line-height: 2;
+  }
+
+  .future-closing {
+    margin-top: 60px;
+  }
+}
+
+
+
+/* =========================
+   LOVE LETTER SECTION
+========================= */
+
+.love-letter {
+  position: relative;
+  min-height: 100vh;
+  padding: 140px 24px 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(173, 111, 72, 0.13),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #12090b 0%,
+      #1b0d11 48%,
+      #160a0d 100%
+    );
+}
+
+.love-letter-glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(126, 55, 49, 0.18);
+  filter: blur(110px);
+  pointer-events: none;
+}
+
+.love-letter-content {
+  position: relative;
+  z-index: 2;
+  width: min(720px, 100%);
+  text-align: center;
+}
+
+/* Heading */
+
+.letter-heading {
+  margin: 32px 0 55px;
+}
+
+.letter-heading p {
+  margin: 0 0 14px;
+  color: #d2ad70;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.letter-heading h2 {
+  margin: 0;
+  color: #f5e8d8;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* Letter body */
+
+.letter-body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.letter-body p,
+.letter-confession p {
+  margin: 0;
+  color: rgba(245, 232, 216, 0.7);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  line-height: 2.1;
+}
+
+/* Heart */
+
+.letter-heart {
+  width: 54px;
+  height: 54px;
+  margin: 55px auto 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c99f5c;
+  border: 1px solid rgba(201, 159, 92, 0.35);
+  border-radius: 50%;
+  box-shadow:
+    0 0 35px rgba(201, 159, 92, 0.08),
+    inset 0 0 20px rgba(201, 159, 92, 0.04);
+}
+
+/* Confession */
+
+.letter-confession {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.letter-highlight {
+  color: #dfc18b !important;
+}
+
+/* Poem */
+
+.letter-poem {
+  position: relative;
+  width: min(570px, 100%);
+  margin: 70px auto 0;
+  padding: 45px 25px;
+  border-top: 1px solid rgba(201, 159, 92, 0.22);
+  border-bottom: 1px solid rgba(201, 159, 92, 0.22);
+}
+
+.letter-poem::before,
+.letter-poem::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(201, 159, 92, 0.35);
+  font-size: 12px;
+}
+
+.letter-poem::before {
+  left: -6px;
+}
+
+.letter-poem::after {
+  right: -6px;
+}
+
+.letter-poem p {
+  margin: 0;
+  color: rgba(245, 232, 216, 0.68);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  line-height: 2.1;
+}
+
+.letter-poem-space {
+  height: 25px;
+}
+
+.letter-poem-highlight {
+  color: #d7b675 !important;
+  font-size: clamp(1.05rem, 2.8vw, 1.25rem) !important;
+}
+
+/* Closing */
+
+.letter-closing {
+  margin-top: 80px;
+}
+
+.letter-closing-line {
+  width: 80px;
+  height: 1px;
+  margin: 0 auto 30px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 159, 92, 0.65),
+    transparent
+  );
+}
+
+.letter-closing p {
+  margin: 0;
+  color: rgba(245, 232, 216, 0.62);
+  font-size: 1rem;
+  line-height: 2.1;
+}
+
+.letter-closing strong {
+  color: #f0d9b0;
+  font-weight: 500;
+}
+
+.letter-closing-star {
+  margin-top: 30px;
+  color: #c99f5c;
+  font-size: 16px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .love-letter {
+    min-height: auto;
+    padding: 105px 20px 125px;
+  }
+
+  .letter-heading {
+    margin-top: 25px;
+    margin-bottom: 45px;
+  }
+
+  .letter-body {
+    gap: 25px;
+  }
+
+  .letter-heart {
+    margin: 45px auto 38px;
+  }
+
+  .letter-confession {
+    gap: 27px;
+  }
+
+  .letter-poem {
+    margin-top: 55px;
+    padding: 38px 18px;
+  }
+
+  .letter-closing {
+    margin-top: 60px;
+  }
+}
+
+
+/* =========================
+   KALYAN.EXE SECTION
+========================= */
+
+.kalyan-exe {
+  position: relative;
+  min-height: 100vh;
+  padding: 130px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #09090a;
+  font-family: "Courier New", monospace;
+}
+
+.exe-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 35px 35px;
+}
+
+.exe-window {
+  position: relative;
+  z-index: 2;
+  width: min(680px, 100%);
+  overflow: hidden;
+  border: 1px solid rgba(201, 159, 92, 0.25);
+  border-radius: 12px;
+  background: rgba(17, 17, 18, 0.96);
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(201, 159, 92, 0.04);
+}
+
+/* Terminal header */
+
+.exe-header {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: #111112;
+}
+
+.exe-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.exe-dots span {
+  width: 9px;
+  height: 9px;
+  display: block;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.exe-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgba(245, 232, 216, 0.45);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+/* Terminal body */
+
+.exe-body {
+  padding: 32px 30px 38px;
+}
+
+.exe-line {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 13px;
+  color: rgba(220, 220, 220, 0.55);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.exe-prompt {
+  color: #c99f5c;
+}
+
+.exe-success {
+  color: #d8c39d;
+}
+
+.exe-divider {
+  width: 100%;
+  height: 1px;
+  margin: 30px 0 38px;
+  background: rgba(201, 159, 92, 0.15);
+}
+
+/* Question */
+
+.exe-question {
+  text-align: center;
+  color: #c99f5c;
+}
+
+.exe-question p {
+  margin: 18px 0 0;
+  color: rgba(245, 232, 216, 0.65);
+  font-family: "Noto Serif Telugu", serif;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.exe-question strong {
+  display: inline-block;
+  margin-top: 8px;
+  color: #f5e8d8;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
+  font-weight: 500;
+}
+
+/* Buttons */
+
+.exe-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.exe-button {
+  min-height: 44px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Noto Serif Telugu", serif;
+  font-size: 0.9rem;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.exe-button:hover {
+  transform: translateY(-2px);
+}
+
+.exe-button-primary {
+  border: 1px solid rgba(201, 159, 92, 0.55);
+  color: #f5e8d8;
+  background: rgba(201, 159, 92, 0.12);
+}
+
+.exe-button-primary:hover {
+  background: rgba(201, 159, 92, 0.2);
+}
+
+.exe-button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(245, 232, 216, 0.7);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.exe-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Response */
+
+.exe-response {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.exe-response p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  color: #d8bd87;
+  font-family: "Noto Serif Telugu", serif;
+  font-size: 1rem;
+}
+
+.exe-response span {
+  display: block;
+  margin-top: 12px;
+  color: rgba(245, 232, 216, 0.55);
+  font-family: "Noto Serif Telugu", serif;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+.exe-contact-button {
+  margin: 25px auto 0;
+  min-height: 42px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(201, 159, 92, 0.4);
+  border-radius: 6px;
+  color: #e8cfa5;
+  background: transparent;
+  cursor: pointer;
+  font-family: "Noto Serif Telugu", serif;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.exe-contact-button:hover {
+  background: rgba(201, 159, 92, 0.1);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .kalyan-exe {
+    min-height: auto;
+    padding: 100px 16px;
+  }
+
+  .exe-body {
+    padding: 25px 18px 30px;
+  }
+
+  .exe-line {
+    font-size: 11px;
+    word-break: break-word;
+  }
+
+  .exe-actions {
+    flex-direction: column;
+  }
+
+  .exe-button {
+    width: 100%;
+  }
+
+  .exe-title {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================
+   CONTACT FORM SECTION
+========================= */
+
+.contact-form-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 130px 20px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(150, 92, 55, 0.12),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #160a0d 0%,
+      #211014 50%,
+      #12090b 100%
+    );
+}
+
+.contact-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(126, 55, 49, 0.18);
+  filter: blur(110px);
+  pointer-events: none;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  width: min(520px, 100%);
+  text-align: center;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  margin: 25px auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 159, 92, 0.35);
+  border-radius: 50%;
+  color: #c99f5c;
+}
+
+.contact-content h2 {
+  margin: 0;
+  color: #f5e8d8;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 500;
+}
+
+.contact-intro {
+  margin: 25px 0 45px;
+  color: rgba(245, 232, 216, 0.65);
+  font-size: 1rem;
+  line-height: 2;
+}
+
+/* Form */
+
+.contact-form {
+  width: 100%;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: rgba(245, 232, 216, 0.68);
+  font-size: 0.82rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(245, 232, 216, 0.12);
+  border-radius: 6px;
+  outline: none;
+  color: #f5e8d8;
+  background: rgba(255, 255, 255, 0.035);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: rgba(245, 232, 216, 0.28);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: rgba(201, 159, 92, 0.55);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.form-group select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-group select option {
+  color: #f5e8d8;
+  background: #211014;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: rgba(201, 159, 92, 0.65);
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  padding-left: 42px;
+}
+
+/* Submit */
+
+.contact-submit {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid rgba(201, 159, 92, 0.45);
+  border-radius: 6px;
+  color: #f5e8d8;
+  background: rgba(201, 159, 92, 0.12);
+  cursor: pointer;
+  font-family: "Noto Serif Telugu", serif;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.contact-submit:hover {
+  background: rgba(201, 159, 92, 0.2);
+}
+
+/* Privacy note */
+
+.contact-note {
+  margin: 25px 0 0;
+  color: rgba(245, 232, 216, 0.35);
+  font-size: 0.76rem;
+  line-height: 1.9;
+}
+
+/* Back */
+
+.contact-back {
+  margin: 40px auto 0;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  color: rgba(245, 232, 216, 0.4);
+  background: transparent;
+  cursor: pointer;
+  font-family: "Noto Serif Telugu", serif;
+  font-size: 0.78rem;
+}
+
+.contact-back svg {
+  transform: rotate(180deg);
+}
+
+.contact-back:hover {
+  color: rgba(245, 232, 216, 0.7);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .contact-form-section {
+    min-height: auto;
+    padding: 100px 18px 120px;
+  }
+
+  .contact-intro {
+    margin-bottom: 38px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* =========================
+   CONTACT FORM STATES
+========================= */
+
+.contact-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.contact-error {
+  margin: -5px 0 20px;
+  padding: 12px 14px;
+  border: 1px solid rgba(190, 90, 90, 0.25);
+  border-radius: 6px;
+  color: rgba(235, 170, 170, 0.85);
+  background: rgba(150, 50, 50, 0.08);
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.contact-spinner {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border: 2px solid rgba(245, 232, 216, 0.25);
+  border-top-color: #d8b777;
+  border-radius: 50%;
+  animation: contact-spin 0.7s linear infinite;
+}
+
+@keyframes contact-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success */
+
+.contact-success {
+  padding-top: 20px;
+}
+
+.contact-success-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 159, 92, 0.45);
+  border-radius: 50%;
+  color: #d8b777;
+  background: rgba(201, 159, 92, 0.08);
+}
+
+.contact-success h2 {
+  margin: 0;
+  color: #f5e8d8;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 500;
+}
+
+.contact-success > p {
+  margin: 25px 0 0;
+  color: rgba(245, 232, 216, 0.68);
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.contact-success-heart {
+  margin: 35px auto 20px;
+  color: #c99f5c;
+}
+
+.contact-success-small {
+  margin: 0 !important;
+  color: rgba(245, 232, 216, 0.4) !important;
+  font-size: 0.82rem !important;
+}
+
+
+
+/* =========================
+   ENDING SECTION
+========================= */
+
+.ending {
+  position: relative;
+  min-height: 100vh;
+  padding: 140px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(126, 55, 49, 0.2),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #12090b 0%,
+      #0d0708 100%
+    );
+}
+
+.ending-glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(133, 72, 55, 0.13);
+  filter: blur(110px);
+  pointer-events: none;
+}
+
+.ending-content {
+  position: relative;
+  z-index: 2;
+  width: min(650px, 100%);
+}
+
+/* Heart */
+
+.ending-heart {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 159, 92, 0.35);
+  border-radius: 50%;
+  color: #c99f5c;
+  box-shadow: 0 0 40px rgba(201, 159, 92, 0.08);
+}
+
+/* Kicker */
+
+.ending-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #c99f5c;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+}
+
+/* Heading */
+
+.ending h2 {
+  margin: 28px 0 50px;
+  color: #f5e8d8;
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+/* Message */
+
+.ending-message {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ending-message p {
+  margin: 0;
+  color: rgba(245, 232, 216, 0.65);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 2.1;
+}
+
+.ending-message span {
+  color: #d8b777;
+}
+
+/* Divider */
+
+.ending-divider {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: min(420px, 80%);
+  margin: 60px auto 45px;
+}
+
+.ending-divider span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 159, 92, 0.45)
+  );
+}
+
+.ending-divider span:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(201, 159, 92, 0.45),
+    transparent
+  );
+}
+
+.ending-divider i {
+  color: #c99f5c;
+  font-size: 13px;
+  font-style: normal;
+}
+
+/* Names */
+
+.ending-names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.ending-names strong {
+  color: #e8cfa5;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-weight: 500;
+}
+
+.ending-names span {
+  color: #c99f5c;
+  font-size: 1rem;
+}
+
+/* Signature */
+
+.ending-signature {
+  margin: 32px 0 0;
+  color: rgba(245, 232, 216, 0.42);
+  font-size: 0.9rem;
+}
+
+/* Final thought */
+
+.ending-footnote {
+  margin: 80px 0 0;
+  color: rgba(245, 232, 216, 0.3);
+  font-size: 0.78rem;
+  line-height: 2;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .ending {
+    min-height: 100svh;
+    padding: 110px 20px;
+  }
+
+  .ending h2 {
+    margin: 25px 0 40px;
+  }
+
+  .ending-message {
+    gap: 23px;
+  }
+
+  .ending-divider {
+    margin: 50px auto 38px;
+  }
+
+  .ending-names {
+    gap: 12px;
+  }
+
+  .ending-footnote {
+    margin-top: 65px;
+  }
+}
+
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+.music-button {
+  position: fixed;
+  z-index: 1000;
+  right: 22px;
+  bottom: 22px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(201, 159, 92, 0.35);
+  border-radius: 50%;
+
+  color: #d8b777;
+  background: rgba(18, 9, 11, 0.78);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(201, 159, 92, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.music-button:hover {
+  transform: scale(1.08);
+  border-color: rgba(201, 159, 92, 0.6);
+  background: rgba(35, 18, 20, 0.9);
+}
+
+.music-button:active {
+  transform: scale(0.95);
+}
+
+.music-button:focus-visible {
+  outline: 1px solid rgba(201, 159, 92, 0.7);
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .music-button {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+
+
+/* =========================
+   SCROLL PROGRESS
+========================= */
+
+.scroll-progress {
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  overflow: hidden;
+  background: rgba(245, 232, 216, 0.04);
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    #8f5c46,
+    #c99f5c,
+    #e2c58e
+  );
+  box-shadow: 0 0 10px rgba(201, 159, 92, 0.35);
+}
+
+
+
+/* =========================
+   MOBILE EXPERIENCE POLISH
+========================= */
+
+@media (max-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero,
+  .before-meeting,
+  .pelli-choopulu,
+  .simplicity,
+  .future,
+  .love-letter,
+  .kalyan-exe,
+  .contact-form-section,
+  .ending {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Prevent very large decorative elements
+     from causing horizontal scrolling */
+
+  .hero-mandala {
+    transform: scale(0.72);
+  }
+
+  .hero-glow {
+    width: 280px;
+    height: 280px;
+  }
+
+  .pelli-orbit {
+    transform: scale(0.7);
+  }
+
+  .pelli-glow {
+    width: 280px;
+    height: 280px;
+  }
+
+  .simplicity-glow {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Telugu text */
+
+  .before-text p,
+  .simplicity-intro p,
+  .future-intro p,
+  .letter-body p,
+  .letter-confession p,
+  .ending-message p {
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Keep decorative side text away from
+     the actual readable content */
+
+  .hero-side-text {
+    display: none;
+  }
+
+  /* Buttons */
+
+  .hero-button {
+    min-height: 48px;
+    padding: 0 22px;
+  }
+
+  /* Terminal */
+
+  .exe-window {
+    border-radius: 9px;
+  }
+
+  /* Form */
+
+  .form-group input,
+  .form-group select {
+    min-height: 50px;
+    font-size: 16px;
+  }
+
+  /* Prevent iOS Safari from zooming into
+     focused form controls */
+
+  .form-group input,
+  .form-group select {
+    font-size: 16px;
+  }
+
+  /* Floating controls */
+
+  .music-button {
+    bottom: 16px;
+  }
+
+  /* Safe-area support for phones with
+     home indicators/notches */
+
+  .music-button {
+    bottom: max(16px, env(safe-area-inset-bottom));
+  }
+
+  .ending {
+    padding-bottom: max(
+      110px,
+      calc(110px + env(safe-area-inset-bottom))
+    );
+  }
+}
+
+
+/* =========================
+   INTRO LOADER
+========================= */
+
+.intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(126, 55, 49, 0.16),
+      transparent 40%
+    ),
+    #12090b;
+}
+
+.intro-loader-content {
+  width: min(300px, 80%);
+  text-align: center;
+}
+
+.intro-loader-symbol {
+  margin-bottom: 25px;
+  color: #c99f5c;
+  font-size: 22px;
+}
+
+.intro-loader-content p {
+  margin: 0;
+  color: rgba(245, 232, 216, 0.75);
+  font-family: "Noto Serif Telugu", serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.intro-loader-line {
+  width: 100%;
+  height: 1px;
+  margin-top: 22px;
+  transform-origin: center;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 159, 92, 0.6),
+    transparent
+  );
+}
+
+
+@media (max-width: 600px) {
+  .intro-loader-content {
+    width: min(250px, 75%);
+  }
+
+  .intro-loader-content p {
+    font-size: 0.9rem;
+  }
+}
